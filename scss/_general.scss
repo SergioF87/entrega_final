@@ -1,0 +1,36 @@
+/* GENERAL */
+
+body {
+    background-color: $color-fondo1;
+    margin: 0;
+
+    li {
+        list-style-type: none;
+        display: inline;
+    }
+ 
+    main {
+        width: 80%;
+        margin: auto;
+
+        h3 {
+            color: $color-tituloPrincipal;
+            font-size: $tam-h3;
+            font-weight: 500;
+            border-bottom: 2px solid $color-auxiliar;
+        }
+
+        h4 {
+            color: $color-tituloSecundario;
+            font-size: $tam-h4;
+            font-weight: 400;
+        }
+
+        p {
+            color: $color-parrafo;
+            font-size: 20px;
+            font-weight: 300;
+            font-family: 'Merriweather', serif;
+        }
+    }
+}

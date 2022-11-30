@@ -1,0 +1,50 @@
+/* MAIN SER ALUMNO */ 
+
+.alumno {
+    display: flex;
+    flex-direction: column;
+    margin: 10px 10% 15px 10%;
+
+    .niveles {
+        display: flex;
+        border: 3px $color-auxiliar solid;
+        border-radius: 6px;
+        margin: 5px 0px 5px 0px;
+        padding: 0.3rem;
+        align-items: center;
+
+        img {
+            height: 10rem;
+            margin: 0.7rem;
+        }
+
+    }
+    .impar {
+        display: flex;
+        flex-direction: row-reverse;
+    }
+
+    @media (max-width: 768px) {
+        .niveles {
+            flex-direction: row;
+            justify-content: center;
+            img {
+                display: none;
+            }
+            p {
+                display: none;
+            }
+            transition: all 0.3s ease;
+            &:hover {
+                transform: scaley(2);
+                background-color: $color-fondo1;
+                z-index: 2;
+                p {
+                    display: block;
+                }
+                flex-direction: column;
+            }
+        }
+
+    }
+}

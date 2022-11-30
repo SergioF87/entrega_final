@@ -1,0 +1,130 @@
+/* HEADER */ 
+
+.encabezado {
+    width: 100%;
+    color: $color-tituloHeader;
+    background: $color-fondo2;
+    display: grid;
+    grid-template-areas:
+    "logo logo nombre nombre"
+    "logo logo navegador navegador";
+    
+    .textoEncabezado {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        font-family: 'Times New Roman', Times, serif;
+        grid-area: nombre;
+                
+        h1 {
+            font-size: $tam-h1;
+            margin-top: 10px;
+            display: inline-block;
+        }
+    
+        h2 {
+            font-size: $tam-h2;
+            margin-bottom: 5px;
+            display: inline-block;
+        }
+    }
+
+    .navegador {
+        display: flex;
+        justify-content: center;
+        grid-area: navegador;
+
+        a {
+            font-size: 1.5rem;
+            font-weight: bold;
+            font-family: 'Merriweather', serif;
+            transition: all 0.3s ease;
+
+            &:hover {
+                color: $color-seleccion;
+                font-size: 1.55rem;
+            }
+        }
+    }
+    
+    .logo {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        grid-area: logo;
+    
+        img {
+            height: 300px;
+        }
+    }
+}
+
+@media (max-width: 1200px) {
+    .encabezado {
+        .textoEncabezado {
+            h1 {
+                font-size: $tam-h1 - 0.5rem;
+            }
+            h2 {
+                font-size: $tam-h2 - 0.5rem;
+            }
+        }
+        .navegador {
+            a {
+                font-size: $tam-a - 0.5rem;
+            }
+        }
+    }
+}
+
+@media (max-width: 770px) {
+    .encabezado {
+        grid-template-areas:
+        "logo"
+        "nombre"
+        "navegador";
+
+        .textoEncabezado {
+            h1 {
+                font-size: $tam-h1 - 1rem;
+            }
+            h2 {
+                font-size: $tam-h2 - 1rem;
+            }
+        }
+    }
+
+    .encabezado2 {
+        grid-template-areas:
+        "logo"
+        "navegador";
+
+        .textoEncabezado {
+            display: none;
+        }
+    }
+}
+
+@media (max-width: 500px) {
+    .encabezado {
+        .textoEncabezado {
+            h1 {
+                font-size: $tam-h1 - 2rem;
+            }
+            h2 {
+                font-size: $tam-h2 - 1.5rem;
+            }
+        }
+        .logo {
+            img {
+                height: 200px;
+            }
+        }
+    }
+}
+
+.encabezado2 {
+    @extend .encabezado;
+}

@@ -1,0 +1,43 @@
+// FUENTES
+
+@import url('https://fonts.googleapis.com/css2?family=Merriweather:wght@300&display=swap');
+
+// VARIABLES
+
+$color-fondo1: #171A21;
+$color-fondo2: linear-gradient(#617073, #AFB3F7);
+$color-tituloPrincipal: #AFB3F7;
+$color-tituloSecundario: #BCC0F8;
+$color-tituloHeader: #171A21;
+$color-auxiliar: #7A93AC;
+$color-parrafo: #E8E9FA;
+$color-seleccion: #617073;
+
+$tam-h1: 5rem;
+$tam-h2: 3rem;
+$tam-h3: 50px;
+$tam-h4: 35px;
+$tam-a: 1.5rem;
+
+// NOVEDADES - INDEX
+
+@mixin estiloNov {
+    border: $color-auxiliar 2px solid;
+    border-radius: 6px;
+    padding: 10px;
+}
+
+// IMAGENES - HISTORIA
+
+@mixin estiloImg {
+    display: block;
+    height: 20rem;
+    margin: 0 10px 0 10px;
+}
+
+// ICONOS
+
+@mixin estiloIcono {
+    height: 30px;
+    margin: 15px;
+}

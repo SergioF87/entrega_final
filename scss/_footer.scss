@@ -1,0 +1,15 @@
+/* FOOTER */ 
+
+footer {
+    background: $color-fondo2;
+
+    .redes {
+        display: flex;
+        justify-content: center;
+        align-items: flex-end;
+
+        img {
+            @include estiloIcono
+        }
+    }
+}

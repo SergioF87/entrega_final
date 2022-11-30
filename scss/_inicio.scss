@@ -1,0 +1,47 @@
+/* MAIN INDEX */ 
+
+.index {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 10px;
+
+    .carousel {
+        width: 60%;
+        display: flex;
+        justify-content: center;
+    }
+    
+    .novedades {
+        margin: 5px 10% 10px 10%;
+        display: grid;
+        grid-template-areas: 
+        "titnov"
+        "nove1" 
+        "nove2";
+
+        .nove1 {
+            grid-area: nove1;
+            @include estiloNov;
+        }
+        
+        .nove2 {
+            grid-area: nove2;
+            @include estiloNov;
+        }
+        
+        h3 {
+            grid-area: titnov;
+        }
+    }
+
+    @media (min-width: 768px) {
+    .novedades {
+        grid-template-areas: 
+        "titnov titnov"
+        "nove1 nove2";
+        column-gap: 10px;
+    }
+    }
+}
+

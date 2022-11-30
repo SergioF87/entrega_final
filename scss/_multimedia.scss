@@ -1,0 +1,35 @@
+/* MAIN MULTIMEDIA */
+
+.multimedia {
+    display: flex;
+    flex-direction: column;
+    margin: 10px 10% 15px 10%;
+
+    .fotos {
+        justify-content: center;
+        img {
+            border-radius: 1rem;
+            padding: 0.4rem;
+            max-width: 100%;
+            height: auto;
+            transition: all 0.3s ease;
+            filter: grayscale(50%);
+    
+            &:hover {
+                transform: scale(1.1);
+                filter: grayscale(0%);
+            }
+        }
+    }
+
+    .videos {
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+
+        iframe {
+            height: auto;
+            margin: 0.2rem;
+        }
+    }
+}

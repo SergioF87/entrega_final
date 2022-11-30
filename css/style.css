@@ -1,0 +1,404 @@
+@import url("https://fonts.googleapis.com/css2?family=Merriweather:wght@300&display=swap");
+/* GENERAL */
+body {
+  background-color: #171A21;
+  margin: 0;
+}
+body li {
+  list-style-type: none;
+  display: inline;
+}
+body main {
+  width: 80%;
+  margin: auto;
+}
+body main h3 {
+  color: #AFB3F7;
+  font-size: 50px;
+  font-weight: 500;
+  border-bottom: 2px solid #7A93AC;
+}
+body main h4 {
+  color: #BCC0F8;
+  font-size: 35px;
+  font-weight: 400;
+}
+body main p {
+  color: #E8E9FA;
+  font-size: 20px;
+  font-weight: 300;
+  font-family: "Merriweather", serif;
+}
+
+/* HEADER */
+.encabezado, .encabezado2 {
+  width: 100%;
+  color: #171A21;
+  background: linear-gradient(#617073, #AFB3F7);
+  display: grid;
+  grid-template-areas: "logo logo nombre nombre" "logo logo navegador navegador";
+}
+.encabezado .textoEncabezado, .encabezado2 .textoEncabezado {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  font-family: "Times New Roman", Times, serif;
+  grid-area: nombre;
+}
+.encabezado .textoEncabezado h1, .encabezado2 .textoEncabezado h1 {
+  font-size: 5rem;
+  margin-top: 10px;
+  display: inline-block;
+}
+.encabezado .textoEncabezado h2, .encabezado2 .textoEncabezado h2 {
+  font-size: 3rem;
+  margin-bottom: 5px;
+  display: inline-block;
+}
+.encabezado .navegador, .encabezado2 .navegador {
+  display: flex;
+  justify-content: center;
+  grid-area: navegador;
+}
+.encabezado .navegador a, .encabezado2 .navegador a {
+  font-size: 1.5rem;
+  font-weight: bold;
+  font-family: "Merriweather", serif;
+  transition: all 0.3s ease;
+}
+.encabezado .navegador a:hover, .encabezado2 .navegador a:hover {
+  color: #617073;
+  font-size: 1.55rem;
+}
+.encabezado .logo, .encabezado2 .logo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  grid-area: logo;
+}
+.encabezado .logo img, .encabezado2 .logo img {
+  height: 300px;
+}
+
+@media (max-width: 1200px) {
+  .encabezado .textoEncabezado h1, .encabezado2 .textoEncabezado h1 {
+    font-size: 4.5rem;
+  }
+  .encabezado .textoEncabezado h2, .encabezado2 .textoEncabezado h2 {
+    font-size: 2.5rem;
+  }
+  .encabezado .navegador a, .encabezado2 .navegador a {
+    font-size: 1rem;
+  }
+}
+@media (max-width: 770px) {
+  .encabezado, .encabezado2 {
+    grid-template-areas: "logo" "nombre" "navegador";
+  }
+  .encabezado .textoEncabezado h1, .encabezado2 .textoEncabezado h1 {
+    font-size: 4rem;
+  }
+  .encabezado .textoEncabezado h2, .encabezado2 .textoEncabezado h2 {
+    font-size: 2rem;
+  }
+  .encabezado2 {
+    grid-template-areas: "logo" "navegador";
+  }
+  .encabezado2 .textoEncabezado {
+    display: none;
+  }
+}
+@media (max-width: 500px) {
+  .encabezado .textoEncabezado h1, .encabezado2 .textoEncabezado h1 {
+    font-size: 3rem;
+  }
+  .encabezado .textoEncabezado h2, .encabezado2 .textoEncabezado h2 {
+    font-size: 1.5rem;
+  }
+  .encabezado .logo img, .encabezado2 .logo img {
+    height: 200px;
+  }
+}
+/* FOOTER */
+footer {
+  background: linear-gradient(#617073, #AFB3F7);
+}
+footer .redes {
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+}
+footer .redes img {
+  height: 30px;
+  margin: 15px;
+}
+
+/* MAIN INDEX */
+.index {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 10px;
+}
+.index .carousel {
+  width: 60%;
+  display: flex;
+  justify-content: center;
+}
+.index .novedades {
+  margin: 5px 10% 10px 10%;
+  display: grid;
+  grid-template-areas: "titnov" "nove1" "nove2";
+}
+.index .novedades .nove1 {
+  grid-area: nove1;
+  border: #7A93AC 2px solid;
+  border-radius: 6px;
+  padding: 10px;
+}
+.index .novedades .nove2 {
+  grid-area: nove2;
+  border: #7A93AC 2px solid;
+  border-radius: 6px;
+  padding: 10px;
+}
+.index .novedades h3 {
+  grid-area: titnov;
+}
+@media (min-width: 768px) {
+  .index .novedades {
+    grid-template-areas: "titnov titnov" "nove1 nove2";
+    column-gap: 10px;
+  }
+}
+
+/* MAIN NUESTRA HISTORIA */
+.historia {
+  display: grid;
+  grid-template-areas: "tithis" "secUno" "secDos";
+  margin: 10px 10% 15px 10%;
+}
+.historia .tithis {
+  grid-area: tithis;
+}
+.historia .secUno {
+  grid-area: secUno;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+}
+.historia .secUno .primera p {
+  grid-area: primera;
+}
+.historia .secUno .imagenUno {
+  display: block;
+  height: 20rem;
+  margin: 0 10px 0 10px;
+  grid-area: imgUno;
+}
+.historia .secDos {
+  grid-area: secDos;
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: space-around;
+  align-items: center;
+}
+.historia .secDos .segunda p {
+  text-align: right;
+  grid-area: segunda;
+}
+.historia .secDos .imagenDos {
+  display: block;
+  height: 20rem;
+  margin: 0 10px 0 10px;
+  grid-area: imgDos;
+}
+
+@media (max-width: 1100px) {
+  .historia .secUno {
+    flex-direction: column;
+  }
+  .historia .secUno .imagenUno {
+    height: auto;
+    margin: auto;
+  }
+  .historia .secDos {
+    flex-direction: column;
+  }
+  .historia .secDos .imagenDos {
+    display: none;
+  }
+  .historia .secDos .segunda p {
+    text-align: left;
+  }
+}
+@media (max-width: 768px) {
+  .historia .secUno .imagenUno {
+    display: none;
+  }
+}
+/* MAIN SER ALUMNO */
+.alumno {
+  display: flex;
+  flex-direction: column;
+  margin: 10px 10% 15px 10%;
+}
+.alumno .niveles {
+  display: flex;
+  border: 3px #7A93AC solid;
+  border-radius: 6px;
+  margin: 5px 0px 5px 0px;
+  padding: 0.3rem;
+  align-items: center;
+}
+.alumno .niveles img {
+  height: 10rem;
+  margin: 0.7rem;
+}
+.alumno .impar {
+  display: flex;
+  flex-direction: row-reverse;
+}
+@media (max-width: 768px) {
+  .alumno .niveles {
+    flex-direction: row;
+    justify-content: center;
+    transition: all 0.3s ease;
+  }
+  .alumno .niveles img {
+    display: none;
+  }
+  .alumno .niveles p {
+    display: none;
+  }
+  .alumno .niveles:hover {
+    transform: scaley(2);
+    background-color: #171A21;
+    z-index: 2;
+    flex-direction: column;
+  }
+  .alumno .niveles:hover p {
+    display: block;
+  }
+}
+
+/* MAIN MULTIMEDIA */
+.multimedia {
+  display: flex;
+  flex-direction: column;
+  margin: 10px 10% 15px 10%;
+}
+.multimedia .fotos {
+  justify-content: center;
+}
+.multimedia .fotos img {
+  border-radius: 1rem;
+  padding: 0.4rem;
+  max-width: 100%;
+  height: auto;
+  transition: all 0.3s ease;
+  filter: grayscale(50%);
+}
+.multimedia .fotos img:hover {
+  transform: scale(1.1);
+  filter: grayscale(0%);
+}
+.multimedia .videos {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+.multimedia .videos iframe {
+  height: auto;
+  margin: 0.2rem;
+}
+
+/* MAIN CONTACTO */
+.contacto {
+  display: grid;
+  grid-template-areas: "mapa mapa" "contacto formulario";
+  margin: 10px 10% 15px 10%;
+}
+.contacto .mapa {
+  grid-area: mapa;
+}
+.contacto .mapa iframe {
+  width: 95%;
+}
+.contacto .directo {
+  grid-area: contacto;
+  display: flex;
+  flex-direction: column;
+}
+.contacto .directo img {
+  height: 30px;
+  margin: 15px;
+}
+.contacto .directo span {
+  font-size: 25px;
+  color: #E8E9FA;
+  font-family: "Merriweather", serif;
+}
+@media (max-width: 799px) {
+  .contacto .directo span {
+    font-size: 13px;
+  }
+}
+.contacto .formulario {
+  grid-area: formulario;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.contacto .formulario .tablero {
+  width: 70%;
+  background-color: #E8E9FA;
+  padding: 10px;
+  border-radius: 4px;
+  margin-bottom: 2px;
+  border: 1.5px solid #7A93AC;
+  font-family: "Merriweather", serif;
+  font-size: 0.8rem;
+}
+.contacto .formulario .tab1:focus {
+  height: 60px;
+}
+.contacto .formulario div {
+  display: flex;
+}
+.contacto .formulario div .botones {
+  width: 7rem;
+  height: 40px;
+  margin: 10px;
+  border-radius: 4px;
+  border: none;
+  color: #171A21;
+  background: linear-gradient(#617073, #AFB3F7);
+  font-size: 20px;
+  font-weight: 500;
+}
+.contacto .formulario div .botones:hover {
+  cursor: pointer;
+  transform: translateY(-3px);
+  transition: all cubic-bezier(0.215, 0.61, 0.355, 1) 0.5s;
+}
+.contacto .formulario div .botones:active {
+  transform: translateY(3px);
+}
+
+@media (max-width: 1023px) {
+  .contacto {
+    grid-template-areas: "mapa" "contacto" "formulario";
+  }
+  .contacto h4 {
+    font-size: 25px;
+  }
+  .contacto iframe {
+    height: 70%;
+  }
+}
+
+/*# sourceMappingURL=style.css.map */

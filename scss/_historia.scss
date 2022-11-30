@@ -1,0 +1,85 @@
+/* MAIN NUESTRA HISTORIA */ 
+
+.historia {
+    display: grid;
+    grid-template-areas:
+    "tithis"
+    "secUno" 
+    "secDos";
+    margin: 10px 10% 15px 10%;
+
+    .tithis {
+        grid-area: tithis;
+    }
+
+    .secUno {
+        grid-area: secUno;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        align-items: center;
+
+        .primera {
+            p {
+                grid-area: primera;
+            }
+        }
+        .imagenUno {
+            @include estiloImg;
+            grid-area: imgUno;
+        }
+    }
+    
+    .secDos {
+        grid-area: secDos;
+        display: flex;
+        flex-direction: row-reverse;
+        justify-content: space-around;
+        align-items: center;
+
+        .segunda {
+            p {
+                text-align: right;
+                grid-area: segunda;
+            }
+        }
+        .imagenDos {
+            @include estiloImg;
+            grid-area: imgDos;
+        }
+    }
+}
+
+@media (max-width: 1100px) {
+    .historia {
+        .secUno {
+            flex-direction: column;
+            .imagenUno {
+                height: auto;
+                margin: auto;
+            }
+        }
+
+        .secDos {
+            flex-direction: column;
+            .imagenDos {
+                display: none;
+            }
+            .segunda {
+                p {
+                    text-align: left;
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 768px) {
+    .historia {
+        .secUno {
+            .imagenUno {
+                display: none;
+            }
+        }
+    }
+}
