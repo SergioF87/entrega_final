@@ -7,7 +7,7 @@
     margin-top: 10px;
 
     .carousel {
-        width: 60%;
+        width: 80%;
         display: flex;
         justify-content: center;
     }
@@ -33,6 +33,15 @@
         h3 {
             grid-area: titnov;
         }
+
+        .imgnov {
+            display: flex;
+                justify-content: center;
+                img {
+                    width: 75%;
+                    margin: auto;
+                }
+        }
     }
 
     @media (min-width: 768px) {
@@ -41,6 +50,10 @@
         "titnov titnov"
         "nove1 nove2";
         column-gap: 10px;
+    }
+
+    .carousel {
+        width: 100%;
     }
     }
 }

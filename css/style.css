@@ -143,7 +143,7 @@ footer .redes img {
   margin-top: 10px;
 }
 .index .carousel {
-  width: 60%;
+  width: 80%;
   display: flex;
   justify-content: center;
 }
@@ -167,10 +167,21 @@ footer .redes img {
 .index .novedades h3 {
   grid-area: titnov;
 }
+.index .novedades .imgnov {
+  display: flex;
+  justify-content: center;
+}
+.index .novedades .imgnov img {
+  width: 75%;
+  margin: auto;
+}
 @media (min-width: 768px) {
   .index .novedades {
     grid-template-areas: "titnov titnov" "nove1 nove2";
     column-gap: 10px;
+  }
+  .index .carousel {
+    width: 100%;
   }
 }
 
@@ -275,7 +286,7 @@ footer .redes img {
     display: none;
   }
   .alumno .niveles:hover {
-    transform: scaley(2);
+    transform: scaley(1.5);
     background-color: #171A21;
     z-index: 2;
     flex-direction: column;
@@ -312,7 +323,6 @@ footer .redes img {
   flex-wrap: wrap;
 }
 .multimedia .videos iframe {
-  height: auto;
   margin: 0.2rem;
 }
 

@@ -36,7 +36,7 @@
             }
             transition: all 0.3s ease;
             &:hover {
-                transform: scaley(2);
+                transform: scaley(1.5);
                 background-color: $color-fondo1;
                 z-index: 2;
                 p {
